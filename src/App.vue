@@ -8,7 +8,8 @@
         </li>
       </ul>
     </div>
-    <input v-model="new_message" type="text" @keydown.enter="send_message" placeholder="Digite">
+    <div class="new_message"
+      <input v-model="new_message" type="text" @keydown.enter="send_message" placeholder="Digite">
   </div>
 
 </template>
@@ -53,6 +54,22 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.msg_panel {
+background-color: light-gray;
+width: 100%;
+height: 700px;
+overflow-y: auto;
+}
+
+.new_message {
+background: #0F0;
+position: fixed;
+bottom: 5vh;
+width:80%;
+margin-left: 10%;
+height: 200px;
 }
 
 h1, h2 {
